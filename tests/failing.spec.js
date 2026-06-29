@@ -1,15 +1,16 @@
 const { test, expect } = require('@playwright/test');
 
-test.describe('Intentional failures for CI practice', () => {
+test.describe('Debug practice', () => {
 
-  test('this test passes', async ({ page }) => {
+  test('element not found failure', async ({ page }) => {
     await page.goto('/');
-    await expect(page).toHaveTitle(/Playwright/);
+    const nonExistentButton = page.getByRole('button', { name: 'This Button Does Not Exist' });
+    await expect(nonExistentButton).toBeVisible({ timeout: 5000 });
   });
 
-  test('this test fails intentionally', async ({ page }) => {
+  test('timeout failure', async ({ page }) => {
     await page.goto('/');
-    await expect(page).toHaveTitle(/This Title Does Not Exist/);
+    await page.waitForSelector('.this-class-does-not-exist', { timeout: 3000 });
   });
 
 });
