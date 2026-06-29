@@ -1,0 +1,116 @@
+<testsuites id="" name="" tests="10" failures="2" skipped="0" errors="0" time="31.337779">
+<testsuite name="example.spec.js" timestamp="2026-06-29T15:07:45.483Z" hostname="chromium" tests="3" failures="0" skipped="0" time="8.356" errors="0">
+<testcase name="Playwright website › has correct title" classname="example.spec.js" time="5.676">
+</testcase>
+<testcase name="Playwright website › get started link works" classname="example.spec.js" time="1.463">
+</testcase>
+<testcase name="Playwright website › docs page loads" classname="example.spec.js" time="1.217">
+</testcase>
+</testsuite>
+<testsuite name="failing.spec.js" timestamp="2026-06-29T15:07:45.483Z" hostname="chromium" tests="2" failures="1" skipped="0" time="12.13" errors="0">
+<testcase name="Intentional failures for CI practice › this test passes" classname="failing.spec.js" time="5.671">
+</testcase>
+<testcase name="Intentional failures for CI practice › this test fails intentionally" classname="failing.spec.js" time="6.459">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|failing-Intentional-failur-2210c-is-test-fails-intentionally-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|failing-Intentional-failur-2210c-is-test-fails-intentionally-chromium\video.webm]]
+
+[[ATTACHMENT|failing-Intentional-failur-2210c-is-test-fails-intentionally-chromium\error-context.md]]
+]]>
+</system-out>
+<failure message="expect(page).toHaveTitle(expected) failed" type="expect.toHaveTitle">
+<![CDATA[  [chromium] › failing.spec.js:10:3 › Intentional failures for CI practice › this test fails intentionally 
+
+    Error: expect(page).toHaveTitle(expected) failed
+
+    Expected pattern: /This Title Does Not Exist/
+    Received string:  "Fast and reliable end-to-end testing for modern web apps | Playwright"
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toHaveTitle" with timeout 5000ms
+        13 × unexpected value "Fast and reliable end-to-end testing for modern web apps | Playwright"
+
+
+      10 |   test('this test fails intentionally', async ({ page }) => {
+      11 |     await page.goto('/');
+    > 12 |     await expect(page).toHaveTitle(/This Title Does Not Exist/);
+         |                        ^
+      13 |   });
+      14 |
+      15 | });
+        at C:\Users\kenia.machaca\practices-ci-cd\playwright-ci-practice\tests\failing.spec.js:12:24
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\failing-Intentional-failur-2210c-is-test-fails-intentionally-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\failing-Intentional-failur-2210c-is-test-fails-intentionally-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\failing-Intentional-failur-2210c-is-test-fails-intentionally-chromium\error-context.md
+]]>
+</failure>
+</testcase>
+</testsuite>
+<testsuite name="example.spec.js" timestamp="2026-06-29T15:07:45.483Z" hostname="firefox" tests="3" failures="0" skipped="0" time="4.721" errors="0">
+<testcase name="Playwright website › has correct title" classname="example.spec.js" time="2.185">
+</testcase>
+<testcase name="Playwright website › get started link works" classname="example.spec.js" time="1.45">
+</testcase>
+<testcase name="Playwright website › docs page loads" classname="example.spec.js" time="1.086">
+</testcase>
+</testsuite>
+<testsuite name="failing.spec.js" timestamp="2026-06-29T15:07:45.483Z" hostname="firefox" tests="2" failures="1" skipped="0" time="8.29" errors="0">
+<testcase name="Intentional failures for CI practice › this test passes" classname="failing.spec.js" time="2.287">
+</testcase>
+<testcase name="Intentional failures for CI practice › this test fails intentionally" classname="failing.spec.js" time="6.003">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|failing-Intentional-failur-2210c-is-test-fails-intentionally-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|failing-Intentional-failur-2210c-is-test-fails-intentionally-firefox\video.webm]]
+
+[[ATTACHMENT|failing-Intentional-failur-2210c-is-test-fails-intentionally-firefox\error-context.md]]
+]]>
+</system-out>
+<failure message="expect(page).toHaveTitle(expected) failed" type="expect.toHaveTitle">
+<![CDATA[  [firefox] › failing.spec.js:10:3 › Intentional failures for CI practice › this test fails intentionally 
+
+    Error: expect(page).toHaveTitle(expected) failed
+
+    Expected pattern: /This Title Does Not Exist/
+    Received string:  "Fast and reliable end-to-end testing for modern web apps | Playwright"
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toHaveTitle" with timeout 5000ms
+        12 × unexpected value "Fast and reliable end-to-end testing for modern web apps | Playwright"
+
+
+      10 |   test('this test fails intentionally', async ({ page }) => {
+      11 |     await page.goto('/');
+    > 12 |     await expect(page).toHaveTitle(/This Title Does Not Exist/);
+         |                        ^
+      13 |   });
+      14 |
+      15 | });
+        at C:\Users\kenia.machaca\practices-ci-cd\playwright-ci-practice\tests\failing.spec.js:12:24
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\failing-Intentional-failur-2210c-is-test-fails-intentionally-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\failing-Intentional-failur-2210c-is-test-fails-intentionally-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\failing-Intentional-failur-2210c-is-test-fails-intentionally-firefox\error-context.md
+]]>
+</failure>
+</testcase>
+</testsuite>
+</testsuites>
